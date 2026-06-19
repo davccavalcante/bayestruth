@@ -1,0 +1,49 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# node
+node_modules/
+.pnpm-store/
+
+# build artifacts
+dist/
+build/
+*.tsbuildinfo
+
+# npm pack output
+*.tgz
+
+# tests
+coverage/
+.vitest/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+# misc
+.cache/
+.turbo/
+.tmp/
+
+# local scratch trust stores and audit logs written during local runs
+*.bayestruth
+*.trust.json
+*.audit.json
+trust-store/
+
+# private project planning and agent context (intentionally not published)
+TASK.md
+AGENTS.md
+AUDIT.md

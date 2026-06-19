@@ -1,0 +1,93 @@
+[
+  {
+    "name": "@takk/bayestruth (ESM core)",
+    "path": "dist/index.js",
+    "limit": "14 kB",
+    "brotli": true
+  },
+  {
+    "name": "@takk/bayestruth (CJS core)",
+    "path": "dist/index.cjs",
+    "limit": "14 kB",
+    "brotli": true
+  },
+  {
+    "name": "@takk/bayestruth/beta",
+    "path": "dist/beta/index.js",
+    "limit": "6 kB",
+    "brotli": true
+  },
+  {
+    "name": "@takk/bayestruth/trust",
+    "path": "dist/trust/index.js",
+    "limit": "6 kB",
+    "brotli": true
+  },
+  {
+    "name": "@takk/bayestruth/bandit",
+    "path": "dist/bandit/index.js",
+    "limit": "6 kB",
+    "brotli": true
+  },
+  {
+    "name": "@takk/bayestruth/decay",
+    "path": "dist/decay/index.js",
+    "limit": "5 kB",
+    "brotli": true
+  },
+  {
+    "name": "@takk/bayestruth/store",
+    "path": "dist/store/index.js",
+    "limit": "5 kB",
+    "brotli": true
+  },
+  {
+    "name": "@takk/bayestruth/policy",
+    "path": "dist/policy/index.js",
+    "limit": "6 kB",
+    "brotli": true
+  },
+  {
+    "name": "@takk/bayestruth/audit",
+    "path": "dist/audit/index.js",
+    "limit": "5 kB",
+    "brotli": true
+  },
+  {
+    "name": "@takk/bayestruth/interceptors",
+    "path": "dist/interceptors/index.js",
+    "limit": "6 kB",
+    "brotli": true
+  },
+  {
+    "name": "@takk/bayestruth/mcp",
+    "path": "dist/mcp/index.js",
+    "limit": "5 kB",
+    "brotli": true
+  },
+  {
+    "name": "@takk/bayestruth/calibration",
+    "path": "dist/calibration/index.js",
+    "limit": "5 kB",
+    "brotli": true
+  },
+  {
+    "name": "@takk/bayestruth/pool",
+    "path": "dist/pool/index.js",
+    "limit": "5 kB",
+    "brotli": true
+  },
+  {
+    "name": "@takk/bayestruth/node",
+    "path": "dist/node/index.js",
+    "limit": "5 kB",
+    "brotli": true,
+    "ignore": ["node:fs"]
+  },
+  {
+    "name": "@takk/bayestruth/edge (ESM)",
+    "path": "dist/edge/index.js",
+    "limit": "14 kB",
+    "brotli": true
+  }
+]

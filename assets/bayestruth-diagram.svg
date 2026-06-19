@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="BayesTruth scores how much you can trust each tool. Each tool, MCP server, or agent gets a calibrated trust score with a confidence range. Vector-db scores 0.97 and is trusted, fetch-tool scores 0.78 and is monitored, search-api dropped to 0.43 and is distrusted.">
+  <title>How BayesTruth scores tool trust</title>
+  <desc>A trust score with a confidence range for each tool. Green is trust, grey is monitor, red is distrust.</desc>
+
+  <!-- Card background, keeps the diagram readable on any page background -->
+  <rect x="0" y="0" width="600" height="600" rx="20" fill="#ffffff"/>
+  <rect x="0.5" y="0.5" width="599" height="599" rx="19.5" fill="none" stroke="#e7e5e4"/>
+
+  <!-- ============================= TITLE ============================= -->
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif">
+    <!-- BayesTruth chip -->
+    <rect x="36" y="46" width="116" height="30" rx="8" fill="#1c1917"/>
+    <text x="94" y="66" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500" fill="#fafaf9">BayesTruth</text>
+    <text x="162" y="67" font-size="21" font-weight="600" fill="#1c1917" letter-spacing="-0.01em">scores how much you</text>
+    <text x="36" y="101" font-size="21" font-weight="600" fill="#1c1917" letter-spacing="-0.01em">can trust each tool, with a number.</text>
+
+    <!-- Subtitle -->
+    <text x="36" y="135" font-size="13.5" font-weight="450" fill="#78716c">Every tool, MCP server, or agent earns a calibrated trust score with a</text>
+    <text x="36" y="156" font-size="13.5" font-weight="450" fill="#78716c">confidence range, updated on every call. Not a guessed threshold.</text>
+  </g>
+
+  <!-- ============================= PANEL ============================= -->
+  <rect x="36" y="186" width="528" height="300" rx="16" fill="#fbfaf8" stroke="#e7e5e4"/>
+  <text x="60" y="220" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="500" letter-spacing="0.16em" fill="#9c958c">TRUST SCORES, LIVE</text>
+
+  <!-- Row 1: vector-db (trust) -->
+  <g font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <circle cx="65" cy="261" r="5" fill="#15803d"/>
+    <text x="80" y="266" font-size="14" fill="#1c1917">vector-db</text>
+    <text x="540" y="266" text-anchor="end" font-size="16" font-weight="600" fill="#15803d">0.97</text>
+    <rect x="60" y="278" width="480" height="14" rx="7" fill="#efedea"/>
+    <rect x="506.4" y="278" width="28.8" height="14" rx="7" fill="#57a877"/>
+    <line x1="525.6" y1="275" x2="525.6" y2="295" stroke="#1c1917" stroke-width="2"/>
+  </g>
+
+  <!-- Row 2: fetch-tool (monitor) -->
+  <g font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <circle cx="65" cy="331" r="5" fill="#78716c"/>
+    <text x="80" y="336" font-size="14" fill="#1c1917">fetch-tool</text>
+    <text x="540" y="336" text-anchor="end" font-size="16" font-weight="600" fill="#78716c">0.78</text>
+    <rect x="60" y="348" width="480" height="14" rx="7" fill="#efedea"/>
+    <rect x="376.8" y="348" width="105.6" height="14" rx="7" fill="#b6afa6"/>
+    <line x1="434.4" y1="345" x2="434.4" y2="365" stroke="#1c1917" stroke-width="2"/>
+  </g>
+
+  <!-- Row 3: search-api (distrust, degraded) -->
+  <g font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <circle cx="65" cy="401" r="5" fill="#b91c1c"/>
+    <text x="80" y="406" font-size="14" fill="#1c1917">search-api</text>
+    <text x="540" y="406" text-anchor="end" font-size="16" font-weight="600" fill="#b91c1c">0.43</text>
+    <rect x="60" y="418" width="480" height="14" rx="7" fill="#efedea"/>
+    <rect x="218.4" y="418" width="100.8" height="14" rx="7" fill="#cf7b6f"/>
+    <line x1="266.4" y1="415" x2="266.4" y2="435" stroke="#1c1917" stroke-width="2"/>
+    <text x="60" y="454" font-size="11.5" fill="#9c958c">was 0.94 last week, now failing, so the decision flipped to distrust</text>
+  </g>
+
+  <!-- ============================= LEGEND ============================= -->
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#57534e">
+    <circle cx="41" cy="521" r="5" fill="#15803d"/>
+    <text x="53" y="526">trust</text>
+    <circle cx="131" cy="521" r="5" fill="#78716c"/>
+    <text x="143" y="526">monitor</text>
+    <circle cx="255" cy="521" r="5" fill="#b91c1c"/>
+    <text x="267" y="526">distrust</text>
+  </g>
+  <text x="36" y="556" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" fill="#9c958c">trust, use it.  monitor, not enough evidence yet.  distrust, route away.</text>
+</svg>

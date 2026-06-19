@@ -1,0 +1,292 @@
+{
+  "name": "@takk/bayestruth",
+  "version": "1.0.0",
+  "description": "BayesTruth: Bayesian trust and reputation scoring for Massive Intelligence (IM) agents, tools, MCP servers, and skills. A zero-runtime-dependency, TypeScript-first library that treats every tool call as Bernoulli evidence and maintains an exact Beta-Bernoulli conjugate posterior per subject, so a trust score is a calibrated number with a credible interval that respects the sample size, not a heuristic threshold. Closed-form online updates with zero inference latency, customizable priors per category, optional time-decay for stale evidence, Thompson-sampling bandit selection between competing tools, a tamper-evident hash-chained audit trail for compliance, and a node-free core that runs in Node, edge runtimes, and the browser, with optional peers @takk/keymesh, @takk/modelchain, @takk/behavioralai, @takk/noeticos, @takk/racs, @takk/gaptime, @takk/krikos, @takk/mcpcustoms, @takk/alkaline, @takk/tokenforecast, @takk/agenticstash and @takk/automend.",
+  "keywords": [
+    "bayesian",
+    "trust-scoring",
+    "reputation",
+    "beta-bernoulli",
+    "conjugate-prior",
+    "credible-interval",
+    "calibration",
+    "thompson-sampling",
+    "multi-armed-bandit",
+    "uncertainty-quantification",
+    "agent-reliability",
+    "tool-trust",
+    "mcp",
+    "compliance",
+    "edge",
+    "openai",
+    "anthropic",
+    "llm",
+    "zero-dependency",
+    "typescript"
+  ],
+  "homepage": "https://github.com/davccavalcante/bayestruth",
+  "bugs": {
+    "url": "https://github.com/davccavalcante/bayestruth/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davccavalcante/bayestruth.git"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "David C Cavalcante",
+    "email": "davcavalcante@proton.me",
+    "url": "https://takk.ag"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./beta": {
+      "import": {
+        "types": "./dist/beta/index.d.ts",
+        "default": "./dist/beta/index.js"
+      },
+      "require": {
+        "types": "./dist/beta/index.d.cts",
+        "default": "./dist/beta/index.cjs"
+      }
+    },
+    "./trust": {
+      "import": {
+        "types": "./dist/trust/index.d.ts",
+        "default": "./dist/trust/index.js"
+      },
+      "require": {
+        "types": "./dist/trust/index.d.cts",
+        "default": "./dist/trust/index.cjs"
+      }
+    },
+    "./bandit": {
+      "import": {
+        "types": "./dist/bandit/index.d.ts",
+        "default": "./dist/bandit/index.js"
+      },
+      "require": {
+        "types": "./dist/bandit/index.d.cts",
+        "default": "./dist/bandit/index.cjs"
+      }
+    },
+    "./decay": {
+      "import": {
+        "types": "./dist/decay/index.d.ts",
+        "default": "./dist/decay/index.js"
+      },
+      "require": {
+        "types": "./dist/decay/index.d.cts",
+        "default": "./dist/decay/index.cjs"
+      }
+    },
+    "./store": {
+      "import": {
+        "types": "./dist/store/index.d.ts",
+        "default": "./dist/store/index.js"
+      },
+      "require": {
+        "types": "./dist/store/index.d.cts",
+        "default": "./dist/store/index.cjs"
+      }
+    },
+    "./policy": {
+      "import": {
+        "types": "./dist/policy/index.d.ts",
+        "default": "./dist/policy/index.js"
+      },
+      "require": {
+        "types": "./dist/policy/index.d.cts",
+        "default": "./dist/policy/index.cjs"
+      }
+    },
+    "./audit": {
+      "import": {
+        "types": "./dist/audit/index.d.ts",
+        "default": "./dist/audit/index.js"
+      },
+      "require": {
+        "types": "./dist/audit/index.d.cts",
+        "default": "./dist/audit/index.cjs"
+      }
+    },
+    "./interceptors": {
+      "import": {
+        "types": "./dist/interceptors/index.d.ts",
+        "default": "./dist/interceptors/index.js"
+      },
+      "require": {
+        "types": "./dist/interceptors/index.d.cts",
+        "default": "./dist/interceptors/index.cjs"
+      }
+    },
+    "./mcp": {
+      "import": {
+        "types": "./dist/mcp/index.d.ts",
+        "default": "./dist/mcp/index.js"
+      },
+      "require": {
+        "types": "./dist/mcp/index.d.cts",
+        "default": "./dist/mcp/index.cjs"
+      }
+    },
+    "./calibration": {
+      "import": {
+        "types": "./dist/calibration/index.d.ts",
+        "default": "./dist/calibration/index.js"
+      },
+      "require": {
+        "types": "./dist/calibration/index.d.cts",
+        "default": "./dist/calibration/index.cjs"
+      }
+    },
+    "./pool": {
+      "import": {
+        "types": "./dist/pool/index.d.ts",
+        "default": "./dist/pool/index.js"
+      },
+      "require": {
+        "types": "./dist/pool/index.d.cts",
+        "default": "./dist/pool/index.cjs"
+      }
+    },
+    "./node": {
+      "import": {
+        "types": "./dist/node/index.d.ts",
+        "default": "./dist/node/index.js"
+      },
+      "require": {
+        "types": "./dist/node/index.d.cts",
+        "default": "./dist/node/index.cjs"
+      }
+    },
+    "./edge": {
+      "import": {
+        "types": "./dist/edge/index.d.ts",
+        "worker": "./dist/edge/index.js",
+        "default": "./dist/edge/index.js"
+      },
+      "require": {
+        "types": "./dist/edge/index.d.cts",
+        "default": "./dist/edge/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "bayestruth": "./dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist coverage .tsbuildinfo",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check src tests",
+    "lint:fix": "biome check --write src tests",
+    "format": "biome format --write src tests",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "publint": "publint",
+    "attw": "attw --pack --ignore-rules=no-resolution",
+    "size": "size-limit",
+    "smoke:dist": "node scripts/smoke-dist.mjs",
+    "prepack": "pnpm run build",
+    "verify": "pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build && pnpm run smoke:dist && pnpm run publint"
+  },
+  "peerDependencies": {
+    "@takk/agenticstash": ">=1.0.0",
+    "@takk/alkaline": ">=1.0.0",
+    "@takk/automend": ">=1.0.0",
+    "@takk/behavioralai": ">=1.0.0",
+    "@takk/gaptime": ">=1.0.0",
+    "@takk/keymesh": ">=1.0.0",
+    "@takk/krikos": ">=1.0.0",
+    "@takk/mcpcustoms": ">=1.0.0",
+    "@takk/modelchain": ">=1.0.0",
+    "@takk/noeticos": ">=1.0.0",
+    "@takk/racs": ">=1.0.0",
+    "@takk/tokenforecast": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@takk/agenticstash": {
+      "optional": true
+    },
+    "@takk/alkaline": {
+      "optional": true
+    },
+    "@takk/automend": {
+      "optional": true
+    },
+    "@takk/behavioralai": {
+      "optional": true
+    },
+    "@takk/gaptime": {
+      "optional": true
+    },
+    "@takk/keymesh": {
+      "optional": true
+    },
+    "@takk/krikos": {
+      "optional": true
+    },
+    "@takk/mcpcustoms": {
+      "optional": true
+    },
+    "@takk/modelchain": {
+      "optional": true
+    },
+    "@takk/noeticos": {
+      "optional": true
+    },
+    "@takk/racs": {
+      "optional": true
+    },
+    "@takk/tokenforecast": {
+      "optional": true
+    }
+  },
+  "packageManager": "pnpm@10.34.1",
+  "sideEffects": false,
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.3",
+    "@biomejs/biome": "^2.5.0",
+    "@size-limit/preset-small-lib": "^12.1.0",
+    "@types/node": "^25.9.3",
+    "@vitest/coverage-v8": "^4.1.9",
+    "publint": "^0.3.21",
+    "size-limit": "^12.1.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  }
+}
