@@ -1,0 +1,14 @@
+# pnpm settings for the BayesTruth repository.
+#
+# Dependency overrides (pnpm 10 reads them from here, not from package.json).
+#
+# esbuild: force the patched line for the whole dev dependency tree.
+# esbuild < 0.28.1 carries GHSA (low severity): the development server allows an
+# arbitrary file read on Windows. esbuild is a transitive devDependency only
+# (pulled by tsup and by vite via vitest), is never part of the published
+# tarball, and BayesTruth ships zero runtime dependencies, so the advisory has
+# no effect on consumers. We still pin the patched line to keep the dependency
+# tree clean and to stop the recurring transitive bump that the parents cannot
+# resolve on their own.
+overrides:
+  esbuild: ^0.28.1

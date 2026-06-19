@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bayestruth.takk.ag/sitemap.xml

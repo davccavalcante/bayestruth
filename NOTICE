@@ -1,0 +1,39 @@
+@takk/bayestruth
+Copyright 2026 David C Cavalcante
+
+This product includes software developed by David C Cavalcante
+(https://takk.ag - davcavalcante@proton.me / say@takk.ag).
+
+bayestruth is a universal, zero-runtime-dependency library and CLI for exact
+Bayesian trust and reputation scoring of tools, MCP servers, skills, and
+agents in Massive Intelligence (IM) systems, using Beta-Bernoulli conjugate
+inference with calibrated credible intervals.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not
+use the software in this repository except in compliance with the License.
+A copy of the License is in the LICENSE file at the root of this repository,
+and is also available at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+────────────────────────────────────────────────────────────────────────────
+THIRD-PARTY COMPONENTS
+────────────────────────────────────────────────────────────────────────────
+
+bayestruth has ZERO required runtime dependencies. Its core is node-free; the
+audit seal uses the Web Crypto API, not node:crypto. The @takk sibling
+packages are OPTIONAL peer dependencies, resolved only when you compose with
+them, and each is distributed under the Apache License, Version 2.0.
+
+The core package pulls in none of the above. Only the @takk/bayestruth/node
+entry point uses the Node standard library (node:fs) for durable persistence.
+
+Development-only tooling (NOT shipped in the published package):
+
+  - tsup            - MIT
+  - vitest          - MIT
+  - typescript      - Apache-2.0
+  - @biomejs/biome  - MIT OR Apache-2.0
+  - publint         - MIT
+  - @arethetypeswrong/cli - MIT
+  - size-limit      - MIT
