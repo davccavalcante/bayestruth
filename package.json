@@ -277,8 +277,8 @@
   "packageManager": "pnpm@10.34.1",
   "sideEffects": false,
   "devDependencies": {
-    "@arethetypeswrong/cli": "^0.18.3",
-    "@biomejs/biome": "^2.5.0",
+    "@arethetypeswrong/cli": "^0.18.4",
+    "@biomejs/biome": "^2.5.1",
     "@size-limit/preset-small-lib": "^12.1.0",
     "@types/node": "^25.9.3",
     "@vitest/coverage-v8": "^4.1.9",
